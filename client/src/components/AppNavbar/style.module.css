@@ -1,0 +1,41 @@
+.bg {
+    color:  aliceblue;
+    background: rgb(110, 54, 1,.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+.brand {
+    color:  aliceBlue;
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+}
+.brand:hover {
+    color: inherit;
+}
+.navLink {
+    color: aliceblue;
+}
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+.ripple:hover {
+    background: green radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.141) 1%) center/15000%;
+}
+.ripple:active {
+    background-color: green;
+    background-size: 100%;
+    transition: background 0s;
+}
+.linkPad {
+    padding-left: .75rem!important;
+    color: rgba(240, 248, 255, 0.712)!important;
+}
+.active {
+    color: aliceblue!important
+}
+.searchBar {
+    margin: auto!important;
+}
