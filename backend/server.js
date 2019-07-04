@@ -31,10 +31,9 @@ app.use(cors());
 app.use(logger("dev"));
 
 // route for serving front end
-if (process.env.NODE_ENV === "production") {
+// if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
-}
-
+// }
 // Add routes, both API and view
 app.use(routes);
 
