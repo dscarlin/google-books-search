@@ -45,6 +45,7 @@ class AppNavbar extends Component {
                             {this.props.location.pathname !== "/saved" && 
                             <SearchForm
                                 getBook={this.props.getBook}
+                                goToBooks={this.props.goToBooks}
                                 className={style.searchBar} 
                             />
                             }

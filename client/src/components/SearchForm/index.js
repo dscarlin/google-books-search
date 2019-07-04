@@ -8,6 +8,7 @@ const SearchForm = props => {
     const handleSubmit = e => {
         e.preventDefault();
         props.getBook(book);
+        props.goToBooks();
     };
     return(
         <Form inline className={style.auto} onSubmit={ handleSubmit }>

@@ -29,6 +29,18 @@
     background-size: 100%;
     transition: background 0s;
 }
+.rippleRed {
+    background-position: center;
+    transition: background 0.8s;
+}
+.rippleRed:hover {
+    background: red radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.141) 1%) center/15000%;
+}
+.rippleRed:active {
+    background-color: red;
+    background-size: 100%;
+    transition: background 0s;
+}
 .linkPad {
     padding-left: .75rem!important;
     color: rgba(240, 248, 255, 0.712)!important;
@@ -37,5 +49,5 @@
     color: aliceblue!important
 }
 .searchBar {
-    margin: auto!important;
+    margin: auto;
 }

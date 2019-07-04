@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { Row, Col, Container, Button } from 'reactstrap';
 import style from './style.module.css';
+import navStyle from "../AppNavbar/style.module.css"
 export default class Books extends Component {
     state = {
       modalOpen: false,
@@ -72,13 +73,13 @@ export default class Books extends Component {
                       </Col>
                       <Col md="2">
                         {dat.saved ? 
-                          <Button onClick={() => this.props.deleteBook(dat._id)}>
+                          <Button className={navStyle.rippleRed} onClick={() => this.props.deleteBook(dat._id)}>
                             Remove
                           </Button>
                           
                           
                         :
-                          <Button onClick={() => this.props.saveBook(dat)}>
+                          <Button className={navStyle.ripple} onClick={() => this.props.saveBook(dat)}>
                             Save
                           </Button>
                         }
@@ -86,13 +87,6 @@ export default class Books extends Component {
                   </Row> 
               ))
             }
-            {/* <Note
-            addNote={ this.props.addNote }
-            removeNote={ this.props.removeNote }
-            data={ data[this.state.modalDataIndex] || {notes: []} }
-            toggle = {this.toggleModal}
-            isOpen={this.state.modalOpen}
-            /> */}
           </Container>
         )  
     }

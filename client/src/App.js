@@ -16,7 +16,7 @@ class App extends Component {
     lastSearch: ""
   };
   componentDidMount(){
-
+    this.state.lastSearch && this.goToBooks();
   };
   componentWillUnmount(){};
   clearData = () => {
@@ -47,7 +47,7 @@ class App extends Component {
         let data = unfilteredData.filter(book => 
           savedIds.indexOf(book._id) === -1);
         this.setState({data});
-        this.goToBooks();
+        // this.goToBooks();
       });
       
     });
@@ -77,6 +77,7 @@ class App extends Component {
       <div className={style.app}>
         <AppNavbar
         getBook={this.getBook}
+        goToBooks={this.goToBooks}
         />
         <Banner 
           goTo={ this.goToBooks }  
