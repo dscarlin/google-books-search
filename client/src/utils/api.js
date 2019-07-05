@@ -1,10 +1,10 @@
 import axios from "axios";
 import {} from "dotenv/config";
-
+console.log(process.env.API_KEY)
 export default {
     // Gets all books from google that match given search criteria
     getBook: function(query) {
-        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}&apikey=${process.env.API_KEY}`);
+        return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
 
     },
     // Gets saved books
